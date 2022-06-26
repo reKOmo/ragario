@@ -9,7 +9,6 @@ public class CommandConsole implements Runnable{
 
 	@Override
 	public void run() {
-		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		while (true) {
 			String commd = in.nextLine();
@@ -30,7 +29,6 @@ public class CommandConsole implements Runnable{
 			case "size":
 				for (Player p : ws.players) {
 					if (p.name().equals(cmd[1])) {
-						System.out.println("a");
 						p.size = Integer.parseInt(cmd[2]);
 						break;
 					}

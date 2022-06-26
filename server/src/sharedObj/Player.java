@@ -9,17 +9,27 @@ public class Player extends GameObj implements Serializable{
 	private float y;
 	public int size;
 	private String name;
+	public static final int defaultfSize = 100;
 	 
 	public Player(int x, int y, String name) {
 		this.x = x;
 		this.y = y;
-		this.size = 1000;
+		this.size = defaultfSize;
 		this.name = name;
 	}
 	
-	public void updatePos(double[] a) {
-		this.x += a[0];
-		this.y += a[1];
+	public void updatePos(double[] a, int maxX, int maxY) {
+		float newX = (float) (x + a[0]);
+		float newY = (float) (y + a[1]);
+
+		float diam = scoreToDiameter() / 2;
+
+		if (newX + diam > maxX || newX - diam< 0 || newY + diam > maxY || newY - diam < 0) {
+			return;
+		}
+
+		this.x = newX;
+		this.y = newY;
 	}
 	
 	public float scoreToDiameter() {

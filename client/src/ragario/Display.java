@@ -1,4 +1,4 @@
-package ragarjo;
+package ragario;
 
 import java.awt.Canvas;
 import java.awt.Color;
