@@ -1,1 +1,1 @@
-A basic try at recrating popular game Agar.io in Java using Java Swing, multithreading and sockets.
+A basic try at recreating popular game [Agar.io](https://agar.io/) in Java using Java Swing, multithreading and sockets.
